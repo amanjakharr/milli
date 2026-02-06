@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Mahima.exe 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #ffe4e9 0%, #ffc2d4 100%);
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .section {
+      display: none;
+      width: 90%;
+      max-width: 440px;
+      padding: 36px 26px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.20);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.20);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.28);
+      z-index: 2;
+    }
+    .active {
+      display: block;
+      animation: popIn 0.8s ease-out;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.6px;
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 24px 0 14px;
+    }
+    p {
+      font-size: 1.12rem;
+      line-height: 1.6;
+      margin: 14px 0;
+    }
+    .subtle {
+      font-size: 0.98rem;
+      opacity: 0.84;
+      margin: 10px 0;
+    }
+    .highlight {
+      color: #fff;
+      font-weight: 600;
+      background: rgba(255, 79, 129, 0.25);
+      padding: 3px 12px;
+      border-radius: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 18px;
+      margin: 10px 0;
+      font-size: 1.08rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffffff, #ffe0e9);
+      color: #ff4f81;
+      box-shadow: 0 10px 24px rgba(255,79,129,0.28);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:active {
+      transform: scale(0.96);
+    }
+    /* Fixed the runBtn positioning */
+    #runBtn {
+      position: fixed; 
+      width: 250px;
+      left: 50%;
+      bottom: 20%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ffe0e9, #ffd1dc);
+      font-size: 1.05rem;
+      z-index: 1000;
+    }
+    .heart-bg {
+      position: absolute;
+      font-size: 30px;
+      pointer-events: none;
+      opacity: 0.75;
+      animation: floatHeart 14s linear infinite;
+      z-index: 1;
+    }
+    #typewriter {
+      font-size: 1.14rem;
+      line-height: 1.7;
+      min-height: 160px;
+      color: #fffef0;
+      margin: 20px 0 30px;
+      text-align: left;
+    }
+    .blinking-cursor {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.86) translateY(24px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 0.75; }
+      100% { transform: translateY(-10vh) rotate(25deg); opacity: 0; }
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section active" id="p1">
+    <h1>Hiii meri babygirl 🤍</h1>
+    <div id="typewriter">
+      <span id="typedText"></span><span class="blinking-cursor">|</span>
+    </div>
+    <button id="continueBtn" style="opacity:0; transform:translateY(20px);" onclick="next('p2')">Tap to continue 🥹</button>
+  </div>
+
+  <div class="section" id="p2">
+    <h1>Before we go further</h1>
+    <p>You have to promise:</p>
+    <p>You won’t say <span class="highlight">“pitega tu mujhse”</span><br>when I finally say yes to something good 😌</p>
+    <button onclick="alert('Suspect behavior detected 😏'); next('p3')">Okay fine, I promise</button>
+  </div>
+
+  <div class="section" id="p3">
+    <h1>Recent crimes I’ve committed</h1>
+    <p>• Falling stupidly hard for you…</p>
+    <p>• Thinking about you the entire day</p>
+    <p>• Making this page instead of teleporting to you</p>
+    <p><b>Regret level:</b> 0%</p>
+    <button onclick="next('p3-5')">Show me something sweet now</button>
+  </div>
+
+  <div class="section" id="p3-5">
+    <h1>Do you remember…?</h1>
+    <p style="font-size:1.2rem; line-height:1.65; margin:28px 0; color:#fffef0;">
+      When you wore that blue kurti...<br>
+      and I couldn’t stop staring like a complete idiot aur tu meko baar baar tokke jaa rehi thi<br><br>
+      That was the moment I knew I was in trouble.
+    </p>
+    <button onclick="next('p3-6')">Next memoryyy</button>
+  </div>
+
+  <div class="section" id="p3-6">
+    <h1>And this one too…</h1>
+    <p style="font-size:1.2rem; line-height:1.65; margin:28px 0; color:#fffef0;">
+      Jab tu yana paas thi and you slept for the first time call pe...<br>
+      I didn’t hang up for almost idk 2 hours, just listening to you breathe 🤍
+    </p>
+    <button onclick="next('p4')">You’re making me emotional now</button>
+  </div>
+
+  <div class="section" id="p4">
+    <h1>Quick vibe check 😏</h1>
+    <p>If I keep saying “no” to… ykw…</p>
+    <button onclick="alert('Classic Mahima response 😭'); next('p5')">Bhaut maarungi + rape kerdungi tera</button>
+    <button onclick="next('p5')">I’ll just seduce you harder</button>
+  </div>
+
+  <div class="section" id="p5">
+    <h1>Okay serious now</h1>
+    <p class="subtle">(don’t laugh please)</p>
+    <h2>Will you be my Valentine, babygirl? 🤍</h2>
+    <button onclick="yesPressed()">Yes, obviously 🥹</button>
+    <button id="runBtn">Let me think…</button>
+  </div>
+
+  <div class="section" id="cuteEnd">
+    <h1>AHHHH YOU SAID YES 🥹🤍</h1>
+    <p>Thank you for being my safe place. I love you <b>bhaut zyada</b>.</p>
+  </div>
+
+  <div class="section" id="savageEnd">
+    <h1>Waitttt ahhhhh you said yes? 🥹🤍</h1>
+    <p>You just made me the happiest idiot alive hehhehehe mezeee he aageyeee</p>
+    <p>And now you’re officially stuck with me or maybe i should say i am stuck with you now 😉</p>
+    <p class="subtle">(good luck escaping)</p>
+    <h2>HAPPYYY VALLENTINESSS DAYYY MERIII JAANNNN 🤍</h2>
+    <p>IIII LLOOVVEEEEE YYOOUUUUU BHHOUUTTT ZAYYDAAAA… and maybe someday I’ll stop being so shy 😏</p>
+  </div>
+
+  <script>
+    const messages = [
+      "Hiii chotu... I hope you're smiling already 🥹",
+      "I made this little thing because...",
+      "I wanted to ask you something very important",
+      "and I wanted it to feel special... 🤍",
+      "...ready?"
+    ];
+
+    let msgIndex = 0, charIndex = 0;
+    const typedText = document.getElementById("typedText");
+    const continueBtn = document.getElementById("continueBtn");
+
+    function type() {
+      if (msgIndex < messages.length) {
+        if (charIndex < messages[msgIndex].length) {
+          typedText.textContent += messages[msgIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 15);
+        } else {
+          typedText.textContent += " ";
+          charIndex = 0;
+          msgIndex++;
+          setTimeout(type, 200);
+        }
+      } else {
+        continueBtn.style.opacity = "1";
+        continueBtn.style.transform = "translateY(0)";
+        continueBtn.style.transition = "all 0.4s ease";
+      }
+    }
+    setTimeout(type, 300);
+
+    function next(id) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      // Hide run button unless on page 5
+      document.getElementById('runBtn').style.display = (id === 'p5') ? 'block' : 'none';
+    }
+
+    const runBtn = document.getElementById('runBtn');
+    const noPhrases = ["nahi naa... 😗", "ek second... 🥹", "catch me! 😏", "please say yes 🥺"];
+
+    function dodge() {
+      const maxX = window.innerWidth - runBtn.offsetWidth;
+      const maxY = window.innerHeight - runBtn.offsetHeight;
+      runBtn.style.left = Math.random() * maxX + 'px';
+      runBtn.style.top = Math.random() * maxY + 'px';
+      runBtn.style.transform = 'none'; // Remove centered transform
+      runBtn.textContent = noPhrases[Math.floor(Math.random() * noPhrases.length)];
+    }
+
+    runBtn.addEventListener('mouseover', dodge);
+    runBtn.addEventListener('touchstart', (e) => { e.preventDefault(); dodge(); });
+
+    function yesPressed() {
+      runBtn.style.display = 'none';
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      const ending = Math.random() > 0.5 ? 'cuteEnd' : 'savageEnd';
+      document.getElementById(ending).classList.add('active');
+      launchHearts();
+    }
+
+    function launchHearts() {
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const h = document.createElement('div');
+          h.className = 'heart-bg';
+          h.innerText = ['🤍','💗','💕','💖'][Math.floor(Math.random()*4)];
+          h.style.left = Math.random() * 100 + 'vw';
+          h.style.bottom = "-5vh";
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 10000);
+        }, i * 150);
+      }
+    }
+  </script>
+</body>
+</html>
